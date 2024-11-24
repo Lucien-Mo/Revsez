@@ -8,7 +8,8 @@ This is a menu where you can find two payloads that work on windows target.
 
 
 2 - In the menu choose 2 and copy the scripts in and on your target pc you need to replace all IPAddress in for your IP ( attacker )
-and after change the extension by .bat ( batch file ) and you need your target to execute this file.
+and after change the extension by .bat ( batch file ) and you need your target to execute this file. Now i've created a batch file "PAYLER" 
+that change all the things that need to be changed. Your payload after used PAYLER will be in a .modifie files normally.
 
 
 3 - Before your target execute this file, you need to install a listener by in the menu, choosing 3 and in the cmd that starts,
