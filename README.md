@@ -2,6 +2,9 @@
                                                 REVSEZ
 ![image](https://github.com/user-attachments/assets/883fbdda-28f2-4bdc-8bee-62aaadeddea5)
                                           ⚠️! HOW TO USE !⚠️
+Before, you need to create 2 folder in the Last version folder, the 2 folders need to be named :
+- Your_scripts
+- Your_scripts_vbs
 
 ⚠️- [1] Choose 1, and install prerequisites. It will install ncat.exe file and zip. It will close REVSEZ but just restart it and here you go.
 
